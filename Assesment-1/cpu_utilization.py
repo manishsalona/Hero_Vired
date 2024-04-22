@@ -2,14 +2,7 @@ import psutil
 import time
 
 def monitor_cpu_usage(threshold=80.0, check_interval=1):
-    """
-    Continuously monitors the CPU usage.
-    
-    Parameters:
-    - threshold (float): The CPU usage percentage that triggers an alert.
-    - check_interval (int): How often (in seconds) to check the CPU usage.
-    """
-    try:
+       try:
         while True:
             cpu_usage = psutil.cpu_percent(interval=1)
             if cpu_usage > threshold:
